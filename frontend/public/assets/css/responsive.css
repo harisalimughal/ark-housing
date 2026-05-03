@@ -1,0 +1,54 @@
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+  .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+  
+  .hero-title { font-size: 2.5rem; }
+  
+  .nav-links { gap: var(--spacing-4); }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-2 { grid-template-columns: 1fr; }
+  .grid-cols-3 { grid-template-columns: 1fr; }
+  .grid-cols-4 { grid-template-columns: 1fr; }
+  
+  .topbar { display: none; } /* Hide topbar on mobile or collapse */
+  
+  .nav-links {
+    display: none; /* In a real app, this would be a hamburger menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: var(--spacing-4);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .hero-section {
+    padding: var(--spacing-8) 0;
+  }
+  
+  .stats-bar {
+    flex-wrap: wrap;
+  }
+  
+  .stats-bar .stat-item {
+    width: 48%;
+    margin-bottom: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar .stat-item {
+    width: 100%;
+  }
+  .hero-title { font-size: 2rem; }
+}

@@ -1,0 +1,86 @@
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / EDITOR
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# NODE MODULES
+# =========================
+node_modules/
+
+# =========================
+# ENV FILES
+# =========================
+.env
+.env.local
+.env.production
+.env.development
+
+# =========================
+# LOG FILES
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# BUILD FILES
+# =========================
+dist/
+build/
+
+# =========================
+# CACHE
+# =========================
+.cache/
+.tmp/
+temp/
+
+# =========================
+# UPLOADS (OPTIONAL)
+# Keep folder but ignore uploaded files
+# =========================
+uploads/*
+!uploads/.gitkeep
+
+public/uploads/*
+!public/uploads/.gitkeep
+
+# =========================
+# GENERATED FILES
+# =========================
+*.zip
+*.tar
+*.gz
+
+# =========================
+# TEST COVERAGE
+# =========================
+coverage/
+
+# =========================
+# COMPOSER
+# =========================
+vendor/
+
+# =========================
+# SYSTEM FILES
+# =========================
+*.bak
+*.tmp
+
+# =========================
+# AI / LOCAL NOTES
+# =========================
+.ai/
+.notes/
