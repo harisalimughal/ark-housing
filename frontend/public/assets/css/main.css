@@ -66,9 +66,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: var(--spacing-2) var(--spacing-6);
+  padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--border-radius-full);
-  font-weight: 600;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
@@ -127,26 +131,82 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links {
   display: flex;
   gap: var(--spacing-6);
+  font-family: var(--font-family);
   font-weight: 500;
-  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
 }
 
 .nav-links li a:hover {
-  color: var(--primary-green);
+  color: var(--primary-navy);
 }
 
 .nav-links .active {
-  color: var(--primary-green);
+  background-color: #93c5fd;
+  color: #000;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
   position: relative;
 }
-.nav-links .active::after {
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 100;
+  margin-top: 10px;
+}
+
+.dropdown::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  top: 100%;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: var(--primary-green);
+  height: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin-bottom: 0;
+}
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+}
+
+.dropdown-menu li:not(:first-child) {
+  margin-top: 4px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #000;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #cbe4f4; /* Subtle light blue match */
 }
 
 /* Sections */
@@ -154,18 +214,35 @@ section {
   padding: var(--spacing-16) 0;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: var(--spacing-12);
+.section-subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 19.4px;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  color: #48A7DD;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-.section-subtitle {
-  color: var(--primary-green);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: var(--spacing-2);
+.section-title {
+  font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 39.8px; line-height: 47px; letter-spacing: 0; color: #000; margin: 0;
 }
+
+.hero-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 57.3px;
+  line-height: 65px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #000;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* Badges */
 .badge {
@@ -176,7 +253,15 @@ section {
   background-color: white;
   border-radius: var(--border-radius-full);
   box-shadow: var(--shadow-md);
-  font-weight: 600;
+}
+
+.badge-text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
 }
 
 /* Cards */
@@ -191,4 +276,68 @@ section {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+}
+
+/* Hero Carousel */
+.hero-carousel-container {
+  max-width: 780px !important;
+  margin: 0 auto;
+}
+
+.hero-slides-wrapper {
+  position: relative;
+  width: 780px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.hero-progress-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 15px; /* Closer to image */
+}
+
+.hero-progress-bar {
+  width: 80px; /* Adjusted for 4 items */
+  height: 4px;
+  background-color: #E2E8F0;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #48A7DD;
+}
+
+.hero-progress-bar.active .progress-fill {
+  animation: fill-progress 5s linear forwards;
+}
+
+
+
+@keyframes fill-progress {
+  from { width: 0%; }
+  to { width: 100%; }
 }

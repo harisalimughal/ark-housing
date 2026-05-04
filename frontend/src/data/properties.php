@@ -8,7 +8,7 @@ $properties = [
         'baths' => 1,
         'price' => '50.00',
         'label' => 'HMO Room',
-        'image' => '/public/assets/images/service-p1.svg'
+        'image' => '/public/assets/images/properties/service-p1.svg'
     ],
     [
         'id' => 2,
@@ -18,7 +18,7 @@ $properties = [
         'baths' => 2,
         'price' => '65.00',
         'label' => 'HMO Room',
-        'image' => '/public/assets/images/service-p2.svg'
+        'image' => '/public/assets/images/properties/service-p2.svg'
     ],
     [
         'id' => 3,
@@ -28,6 +28,6 @@ $properties = [
         'baths' => 2,
         'price' => '80.00',
         'label' => 'HMO Room',
-        'image' => '/public/assets/images/service-p3.svg'
+        'image' => '/public/assets/images/properties/service-p3.svg'
     ]
 ];

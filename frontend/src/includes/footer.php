@@ -1,61 +1,72 @@
-<footer style="background-color: #f0f9ff; padding: var(--spacing-16) 0 var(--spacing-4) 0; margin-top: var(--spacing-12);">
-    <div class="container grid grid-cols-4 gap-8" style="margin-bottom: var(--spacing-12);">
+<footer style="background-color: #f2f8fc; padding: var(--spacing-16) 0 0 0; margin-top: var(--spacing-12); font-family: var(--font-family);">
+    <div class="container grid grid-cols-4 gap-8" style="margin-bottom: var(--spacing-12); color: #000;">
         <!-- Column 1: Info -->
         <div>
-            <img src="/public/assets/images/logo-full.png" alt="Ark Housing Group" style="height: 40px; margin-bottom: var(--spacing-4);">
-            <p style="color: var(--text-light); margin-bottom: var(--spacing-4); font-size: 0.9rem;">
-                732/21 Street, New York<br>
-                United Kingdom
+            <img src="/public/assets/images/logos/logo-full.png" alt="Ark Housing Group" style="height: 40px; margin-bottom: var(--spacing-4);">
+            <p style="margin-bottom: var(--spacing-4); font-size: 0.95rem; font-weight: 500;">
+                2728 Hickory Street<br>
+                Salt Lake City, UT 84104
             </p>
-            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: var(--spacing-2);">📞 0123 456 7890</p>
-            <p style="color: var(--text-light); font-size: 0.9rem;">✉️ info@arkhousing.co.uk</p>
+            <p style="font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; font-weight: 500;">
+                <img src="/public/assets/images/icons/phone.svg" alt="Phone" width="18" height="18" style="filter: brightness(0);"> +1 206-214-2298
+            </p>
+            <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 8px; font-weight: 500;">
+                <img src="/public/assets/images/icons/email.svg" alt="Email" width="18" height="18" style="filter: brightness(0);"> support@rezilla.com
+            </p>
         </div>
         
         <!-- Column 2: Quick Links -->
         <div>
-            <h4 style="margin-bottom: var(--spacing-6);">Quick Links</h4>
-            <ul style="display: flex; flex-direction: column; gap: var(--spacing-2); color: var(--text-light); font-size: 0.9rem;">
+            <h4 style="margin-bottom: 1.25rem; font-weight: 600; font-size: 1.1rem; color: #000;">Quick Links</h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; font-weight: 500;">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">Listings</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Blogs</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Become a Agent</a></li>
             </ul>
         </div>
         
-        <!-- Column 3: Our Services -->
+        <!-- Column 3: Discovery -->
         <div>
-            <h4 style="margin-bottom: var(--spacing-6);">Our Services</h4>
-            <ul style="display: flex; flex-direction: column; gap: var(--spacing-2); color: var(--text-light); font-size: 0.9rem;">
-                <li><a href="#">Landlords</a></li>
-                <li><a href="#">Tenants</a></li>
-                <li><a href="#">Compliance</a></li>
-                <li><a href="#">CSR</a></li>
-                <li><a href="#">Property Management</a></li>
-                <li><a href="#">FAQ</a></li>
+            <h4 style="margin-bottom: 1.25rem; font-weight: 600; font-size: 1.1rem; color: #000;">Discovery</h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; font-weight: 500;">
+                <li><a href="#">Landlord Enquiry</a></li>
+                <li><a href="#">RSL Partner</a></li>
+                <li><a href="#">Guaranteed Rent</a></li>
+                <li><a href="#">HMO</a></li>
+                <li><a href="#">Transitional Housing</a></li>
+                <li><a href="#">FAQ's</a></li>
             </ul>
         </div>
         
         <!-- Column 4: Newsletter -->
         <div>
-            <h4 style="margin-bottom: var(--spacing-6);">Newsletter</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: var(--spacing-4);">Subscribe to our newsletter</p>
-            <form style="display: flex; background: white; border-radius: var(--border-radius-full); padding: 4px; box-shadow: var(--shadow-sm);">
-                <input type="email" placeholder="Email Address" style="border: none; outline: none; padding: 0.5rem 1rem; flex-grow: 1; border-radius: var(--border-radius-full);">
-                <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">→</button>
+            <h4 style="margin-bottom: 1.25rem; font-weight: 600; font-size: 1.1rem; color: #000;">Subscribe to our Newsletter!</h4>
+            <form style="display: flex; background: white; border-radius: var(--border-radius-full); padding: 4px 4px 4px 1rem; box-shadow: var(--shadow-sm); align-items: center; margin-bottom: 2rem;">
+                <input type="email" placeholder="Email Address" style="border: none; outline: none; padding: 0.5rem 0; flex-grow: 1; font-family: var(--font-family); font-size: 0.95rem; color: #000;">
+                <button type="submit" style="background: none; border: none; cursor: pointer; padding: 0; display: flex; align-items: center;">
+                    <img src="/public/assets/images/icons/arrow.svg" alt="Subscribe" width="40" height="40">
+                </button>
             </form>
+            
+            <h4 style="margin-bottom: 1.25rem; font-weight: 600; font-size: 1.1rem; color: #000;">Follow Us on</h4>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="#"><img src="/public/assets/images/icons/fb.svg" alt="Facebook" width="12" height="22"></a>
+                <a href="#"><img src="/public/assets/images/icons/insta.svg" alt="Instagram" width="22" height="22"></a>
+            </div>
         </div>
     </div>
     
     <!-- Bottom Footer -->
-    <div style="border-top: 1px solid #e2e8f0; padding-top: var(--spacing-4);">
-        <div class="container flex justify-between items-center" style="font-size: 0.8rem; color: var(--text-light);">
-            <p>&copy; 2024 Ark Housing Group. All rights reserved.</p>
-            <div class="flex gap-4">
-                <a href="#">Terms of Privacy</a>
-                <a href="#">Disclaimer</a>
-                <a href="#">Cookie Policy</a>
+    <div style="background-color: #111111; height: 50px; display: flex; align-items: center;">
+        <div class="container flex justify-between items-center" style="font-size: 0.9rem; color: #e5e7eb; width: 100%;">
+            <p>&copy; 2025 TechClues. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" style="color: #e5e7eb;">Terms and Conditions</a>
+                <a href="#" style="color: #e5e7eb;">Disclaimer</a>
+                <a href="#" style="color: #e5e7eb;">Privacy Policy</a>
             </div>
         </div>
     </div>

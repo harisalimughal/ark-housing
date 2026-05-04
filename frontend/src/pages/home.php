@@ -28,103 +28,185 @@ require_once __DIR__ . '/../data/blogs.php';
 <!-- Hero Section -->
 <section class="hero-section text-center">
     <div class="container">
-        <h3 class="section-subtitle" style="color: var(--primary-green); text-transform: uppercase; font-weight: bold; letter-spacing: 1px; margin-bottom: 1rem;">Real Estate</h3>
-        <h1 class="hero-title" style="font-size: 4rem; font-weight: 800; margin-bottom: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.2;">Create your pathways to independent</h1>
+        <h3 class="section-subtitle">Real Estate</h3>
+        <h1 class="hero-title">Create your pathways to independent</h1>
         <p style="color: var(--text-light); margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Providing supported accommodation, transitional housing and guaranteed rent services across the UK. We focus on dignity, stability, and high standards.</p>
         
-        <div style="position: relative; max-width: 800px; margin: 0 auto; z-index: 10;">
-            <img src="/public/assets/images/home-center.svg" alt="Modern Bedroom" style="border-radius: var(--border-radius-lg); width: 100%;">
-            
-            <!-- Carousel Buttons -->
-            <button style="position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%); width: 48px; height: 48px; border-radius: 50%; background: white; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 20; color: #64748b;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <button style="position: absolute; top: 50%; right: 0; transform: translate(50%, -50%); width: 48px; height: 48px; border-radius: 50%; background: white; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 20; color: #64748b;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
-            
-            <div class="badge" style="position: absolute; bottom: -4rem; left: 10%; transform: translateY(50%); box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: white; padding: 1rem 2rem; border-radius: 50px; display: flex; align-items: center; gap: 1rem;">
-                <div style="display: flex; margin-right: 0.5rem;">
-                    <img src="https://i.pravatar.cc/100?img=1" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 4;">
-                    <img src="https://i.pravatar.cc/100?img=2" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 3;">
-                    <img src="https://i.pravatar.cc/100?img=3" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 2;">
-                    <div style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 1; background: #333; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">+</div>
-                </div>
-                <div style="text-align: left;">
-                    <strong style="display: block; color: var(--primary-navy);">72k+ Happy</strong>
-                    <span style="color: var(--text-light); font-size: 0.9rem;">Customers</span>
+        <div class="hero-carousel-container" style="position: relative; margin: 0 auto; z-index: 10;">
+            <div class="hero-slides-wrapper">
+                <img src="/public/assets/images/properties/home-center.svg" class="hero-slide active" alt="Slide 1">
+                <img src="/public/assets/images/properties/home-center2.svg" class="hero-slide" alt="Slide 2">
+                <img src="/public/assets/images/properties/home-center3.svg" class="hero-slide" alt="Slide 3">
+                <img src="/public/assets/images/properties/home-center4.svg" class="hero-slide" alt="Slide 4">
+
+                <!-- Progress Bars overlaid near bottom of image -->
+                <div class="hero-progress-container" style="position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 20; margin-top: 0;">
+                    <div class="hero-progress-bar active"><div class="progress-fill"></div></div>
+                    <div class="hero-progress-bar"><div class="progress-fill"></div></div>
+                    <div class="hero-progress-bar"><div class="progress-fill"></div></div>
+                    <div class="hero-progress-bar"><div class="progress-fill"></div></div>
                 </div>
             </div>
-            <div class="badge" style="position: absolute; bottom: -4rem; right: 10%; transform: translateY(50%); box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: white; padding: 1rem 2rem; border-radius: 50px; display: flex; align-items: center; gap: 1rem;">
-                <img src="/public/assets/images/home-center.svg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-                <div style="text-align: left;">
-                    <strong style="display: block; color: var(--primary-navy);">200+ New</strong>
-                    <span style="color: var(--text-light); font-size: 0.9rem;">Listings Everyday!</span>
+
+            <!-- Carousel Buttons (straddling left/right edges of the image) -->
+            <button id="hero-prev" style="position: absolute; top: 200px; left: -20px; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.95); border: none; box-shadow: 0 2px 12px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 30; color: #64748b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button id="hero-next" style="position: absolute; top: 200px; right: -0.5px; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.95); border: none; box-shadow: 0 2px 12px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 30; color: #64748b;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+
+            <!-- Left Badge (Happy Customers) -->
+            <div class="badge" style="position: absolute; bottom: -2rem; left: -20px; transform: translateY(50%); box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: white; padding: 1rem 1.5rem; border-radius: 50px; display: flex; align-items: center; gap: 1rem; z-index: 30;">
+                <div style="display: flex; margin-right: 0.5rem;">
+                    <img src="https://i.pravatar.cc/100?img=11" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 6;">
+                    <img src="https://i.pravatar.cc/100?img=12" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 5;">
+                    <img src="https://i.pravatar.cc/100?img=13" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 4;">
+                    <img src="https://i.pravatar.cc/100?img=14" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 3;">
+                    <img src="https://i.pravatar.cc/100?img=15" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 2;">
+                    <div style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; margin-left: -10px; z-index: 1; background: #333; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">+</div>
+                </div>
+                <div class="badge-text" style="text-align: left;">
+                    72k+ Happy<br>
+                    Customers
+                </div>
+            </div>
+
+            <!-- Right Badge (Listings) -->
+            <div class="badge" style="position: absolute; bottom: -2rem; right: -20px; transform: translateY(50%); box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: white; padding: 1rem 1.5rem; border-radius: 50px; display: flex; align-items: center; gap: 1rem; z-index: 30;">
+                <img src="/public/assets/images/properties/home-center.svg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                <div class="badge-text" style="text-align: left;">
+                    200+ New<br>
+                    Listings Everyday!
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Stats Bar -->
-<section style="background-color: var(--primary-green); color: white; padding: 1.5rem 0;">
-    <div class="container flex justify-between stats-bar" style="text-align: center; font-weight: 500;">
-        <div class="stat-item">⭐ 10+ Years of Experience</div>
-        <div class="stat-item">🤝 150+ Professional Partners</div>
-        <div class="stat-item">🏠 200+ Properties Managed</div>
-        <div class="stat-item">💯 100% Client Satisfaction</div>
+<!-- Green Stats Strip -->
+<section style="background-color: var(--primary-green); color: white; padding: 1.75rem 0;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; align-items: center;">
+
+        <!-- Fully Compliant Housing -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6rem;">
+            <img src="/public/assets/images/icons/home.svg" alt="Home" width="34" height="34">
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16.79px; line-height: 1; letter-spacing: 0; margin: 0;">Fully Compliant Housing</p>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 11.76px; line-height: 21.83px; letter-spacing: 0; margin: 0; opacity: 0.9;">Rigorous safety standards &amp; certifications.</p>
+        </div>
+
+        <!-- Local Authority Partners -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6rem;">
+            <img src="/public/assets/images/icons/authority.svg" alt="Authority" width="34" height="34">
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16.79px; line-height: 1; letter-spacing: 0; margin: 0;">Local Authority Partners</p>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 11.76px; line-height: 21.83px; letter-spacing: 0; margin: 0; opacity: 0.9;">Trusted by councils across the UK.</p>
+        </div>
+
+        <!-- Managed & Supported -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6rem;">
+            <img src="/public/assets/images/icons/support.svg" alt="Support" width="34" height="34">
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16.79px; line-height: 1; letter-spacing: 0; margin: 0;">Managed &amp; Supported</p>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 11.76px; line-height: 21.83px; letter-spacing: 0; margin: 0; opacity: 0.9;">Dedicated teams for tenant well-being.</p>
+        </div>
+
+        <!-- Secure & Safe Living -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6rem;">
+            <img src="/public/assets/images/icons/living.svg" alt="Living" width="28" height="29">
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16.79px; line-height: 1; letter-spacing: 0; margin: 0;">Secure &amp; Safe Living</p>
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 11.76px; line-height: 21.83px; letter-spacing: 0; margin: 0; opacity: 0.9;">Quality environments for all residents.</p>
+        </div>
+
     </div>
 </section>
 
 <!-- Tailored Housing Services -->
-<section style="padding: 4rem 0;">
-    <div class="container">
+<section style="padding: 8rem 0 4rem; position: relative; overflow: visible;">
+    <!-- Globe orb near top-left, close to green strip above -->
+    <div class="container" style="position: relative;">
+        <svg style="position: absolute; left: -20px; top: -7rem;" width="140" height="140" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle opacity="0.55" cx="50.0083" cy="50.0093" r="50" transform="rotate(-60 50.0083 50.0093)" fill="url(#globe_grad)"/>
+            <defs>
+                <linearGradient id="globe_grad" x1="50.0083" y1="0.00927734" x2="50.0083" y2="100.009" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#48A7DD"/>
+                    <stop offset="1" stop-color="#48A7DD" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+        </svg>
+
         <div class="text-center" style="margin-bottom: 3rem;">
-            <p class="section-subtitle">What we offer</p>
-            <h2 style="font-size: 2rem;">Tailored Housing Services</h2>
+            <p class="section-subtitle">Our Expertise</p>
+            <h2  class="section-title">Tailored Housing Services</h2>
         </div>
         
-        <div class="grid grid-cols-4 gap-6 text-center">
-            <div class="card" style="background-color: var(--primary-navy); color: white; padding: 2rem;">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">🏠</div>
-                <h4 style="color: white;">HMO</h4>
+        <div style="display: grid; grid-template-columns: repeat(4, 277px); gap: 1.5rem; justify-content: center;">
+
+            <!-- HMO -->
+            <div style="background: #17386B; width: 277px; height: 277px; border-radius: 30px; box-shadow: 4px 10px 30px 0px #00000026; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.25rem; color: white;">
+                <img src="/public/assets/images/icons/hmo.svg" alt="HMO" width="45" height="50">
+                <h4 style="color: white; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0; text-align: center;">HMO</h4>
             </div>
-            <div class="card" style="background-color: var(--primary-navy); color: white; padding: 2rem;">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">🏘️</div>
-                <h4 style="color: white;">Transitional Housing</h4>
+
+            <!-- Transitional Housing -->
+            <div style="background: #17386B; width: 277px; height: 277px; border-radius: 30px; box-shadow: 4px 10px 30px 0px #00000026; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.25rem; color: white;">
+                <img src="/public/assets/images/icons/transitional-housing.svg" alt="Transitional Housing" width="50" height="50">
+                <h4 style="color: white; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0; text-align: center;">Transitional<br>Housing</h4>
             </div>
-            <div class="card" style="background-color: var(--primary-navy); color: white; padding: 2rem;">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">🏥</div>
-                <h4 style="color: white;">Support Living</h4>
+
+            <!-- Support Living -->
+            <div style="background: #17386B; width: 277px; height: 277px; border-radius: 30px; box-shadow: 4px 10px 30px 0px #00000026; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.25rem; color: white;">
+                <img src="/public/assets/images/icons/support-living.svg" alt="Support Living" width="50" height="50">
+                <h4 style="color: white; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0; text-align: center;">Support<br>Living</h4>
             </div>
-            <div class="card" style="background-color: var(--primary-navy); color: white; padding: 2rem;">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">✅</div>
-                <h4 style="color: white;">Guaranteed Rent</h4>
+
+            <!-- Guaranteed Rent -->
+            <div style="background: #17386B; width: 277px; height: 277px; border-radius: 30px; box-shadow: 4px 10px 30px 0px #00000026; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.25rem; color: white;">
+                <img src="/public/assets/images/icons/rent.svg" alt="Guaranteed Rent" width="50" height="50">
+                <h4 style="color: white; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; margin: 0; text-align: center;">Guaranteed<br>Rent</h4>
             </div>
+
         </div>
     </div>
 </section>
 
 <!-- Raising Standards -->
-<section style="padding: 4rem 0; background-color: var(--bg-light);">
-    <div class="container grid grid-cols-2 gap-8 items-center">
+<section style="padding: 5rem 0; background-color: #fff;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+
+        <!-- Left: Text -->
         <div>
-            <p class="section-subtitle">Why Choose Us</p>
-            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Raising Standards in Supported Living</h2>
-            <p style="color: var(--text-light); margin-bottom: 2rem;">We are committed to providing the highest quality of living spaces. Our properties are meticulously maintained and designed to offer comfort, security, and a true sense of home for all our tenants.</p>
-            
-            <ul style="display: flex; flex-direction: column; gap: 1rem;">
-                <li style="display: flex; align-items: center; gap: 0.5rem;">✅ Compliance and Maintenance</li>
-                <li style="display: flex; align-items: center; gap: 0.5rem;">✅ Fair Pricing and Transparency</li>
-                <li style="display: flex; align-items: center; gap: 0.5rem;">✅ Fast and Efficient Process</li>
-                <li style="display: flex; align-items: center; gap: 0.5rem;">✅ 24/7 Support Services</li>
+            <p class="section-subtitle">Who Are We</p>
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">Raising Standards in<br>Supported Living</h2>
+            <p style="color: var(--text-light); margin-bottom: 2.5rem; font-size: 0.95rem; line-height: 1.7;">We go beyond basic compliance to ensure every property feels like a home. Our tenant-first approach combined with rigorous management protocols makes us the preferred partner for local authorities and landlords.</p>
+
+            <ul style="display: flex; flex-direction: column; gap: 1.1rem; list-style: none; padding: 0; margin: 0;">
+                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
+                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
+                    Compliance-led housing model
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
+                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
+                    Trusted by partners &amp; councils
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
+                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
+                    End-to-end management
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
+                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
+                    Tenant-first approach
+                </li>
             </ul>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-            <img src="/public/assets/images/who-are-we-p1.svg" alt="Living Room 1" style="border-radius: var(--border-radius-lg); width: 100%; height: 100%; object-fit: cover; grid-row: span 2;">
-            <img src="/public/assets/images/who-are-we-p2.svg" alt="Living Room 2" style="border-radius: var(--border-radius-lg); width: 100%; height: 150px; object-fit: cover;">
-            <img src="/public/assets/images/who-are-we-p3.svg" alt="Living Room 3" style="border-radius: var(--border-radius-lg); width: 100%; height: 150px; object-fit: cover;">
+
+        <!-- Right: Images -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: end;">
+            <!-- Large image spanning full height on left column -->
+            <img src="/public/assets/images/properties/who-are-we-p1.svg" alt="Property" style="grid-row: span 2; width: 100%; height: 445px; object-fit: cover; border-radius: 30px;">
+            <!-- Two small images stacked on right column -->
+            <img src="/public/assets/images/properties/who-are-we-p2.svg" alt="Interior 1" style="width: 100%; height: 215px; object-fit: cover; border-radius: 30px;">
+            <img src="/public/assets/images/properties/who-are-we-p3.svg" alt="Interior 2" style="width: 100%; height: 215px; object-fit: cover; border-radius: 30px;">
         </div>
+
     </div>
 </section>
 
@@ -198,15 +280,71 @@ require_once __DIR__ . '/../data/blogs.php';
 
 <!-- Become a Tenant CTA -->
 <section style="padding: 4rem 0;">
-    <div class="container">
-        <div class="card" style="background-color: var(--primary-navy); color: white; padding: 3rem; text-align: center; border-radius: var(--border-radius-lg); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 50px; left: 50px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);"></div>
+    <div class="container" style="max-width: 1120px;">
+        <div class="card" style="font-family: var(--font-family); background-color: var(--primary-navy); color: white; padding: 3.5rem; text-align: center; border-radius: 40px; position: relative; overflow: hidden; min-height: 260px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="/public/assets/images/icons/globe.svg" alt="Decoration" style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%); width: 100px; height: 100px;">
             
-            <h2 style="font-size: 2.5rem; color: white; margin-bottom: 1rem;">Become a Tenants</h2>
-            <p style="color: #94a3b8; margin-bottom: 2rem;">Join our community and experience the best in modern living. Contact us today to find your perfect home.</p>
-            <a href="#" class="btn btn-primary">Get in touch</a>
+            <h2 style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">Become a Tenants</h2>
+            <p style="color: #e2e8f0; margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.6;">
+                Fusce venenatis tellus a felis scelerisque.<br>
+                venenatis tellus a felis scelerisque.
+            </p>
+            <a href="#" class="btn btn-primary" style="padding: 0.75rem 2rem; border-radius: 30px; font-weight: 500;">Tenants Enquiry</a>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const progressBars = document.querySelectorAll('.hero-progress-bar');
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        // Remove active class from all
+        slides.forEach(s => s.classList.remove('active'));
+        progressBars.forEach(b => b.classList.remove('active'));
+
+        // Handle index wrap around
+        if (index >= slides.length) currentSlide = 0;
+        else if (index < 0) currentSlide = slides.length - 1;
+        else currentSlide = index;
+
+        // Add active class
+        slides[currentSlide].classList.add('active');
+        progressBars[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function startInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000); // 5 seconds
+    }
+
+    // Event Listeners
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startInterval(); // Reset timer on click
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startInterval(); // Reset timer on click
+    });
+
+    // Initialize
+    startInterval();
+});
+</script>
 
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>

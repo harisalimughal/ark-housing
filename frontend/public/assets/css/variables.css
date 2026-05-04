@@ -1,13 +1,13 @@
 :root {
-  --primary-green: #22c55e; /* Ark Housing Green */
-  --primary-green-hover: #16a34a;
-  --primary-navy: #1e293b; /* Ark Housing Navy */
+  --primary-green: #1EAF38; /* Ark Housing Green */
+  --primary-green-hover: #178b2b;
+  --primary-navy: #16386B; /* Ark Housing Navy */
   --text-dark: #334155;
   --text-light: #64748b;
   --bg-light: #f8fafc;
   --bg-white: #ffffff;
   
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family: 'Poppins', sans-serif;
   
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
