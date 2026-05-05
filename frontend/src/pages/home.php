@@ -168,131 +168,484 @@ require_once __DIR__ . '/../data/blogs.php';
     </div>
 </section>
 
-<!-- Raising Standards -->
-<section style="padding: 5rem 0; background-color: #fff;">
-    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+<!-- WHO ARE WE -->
+<?php
+require_once __DIR__ . '/../includes/who-are-we.php';
+?>
 
-        <!-- Left: Text -->
-        <div>
-            <p class="section-subtitle">Who Are We</p>
-            <h2 class="section-title" style="margin-bottom: 1.5rem;">Raising Standards in<br>Supported Living</h2>
-            <p style="color: var(--text-light); margin-bottom: 2.5rem; font-size: 0.95rem; line-height: 1.7;">We go beyond basic compliance to ensure every property feels like a home. Our tenant-first approach combined with rigorous management protocols makes us the preferred partner for local authorities and landlords.</p>
 
-            <ul style="display: flex; flex-direction: column; gap: 1.1rem; list-style: none; padding: 0; margin: 0;">
-                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
-                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
-                    Compliance-led housing model
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
-                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
-                    Trusted by partners &amp; councils
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
-                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
-                    End-to-end management
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.95rem; color: #1a1a2e;">
-                    <img src="/public/assets/images/icons/home-tick.svg" width="20" height="20" alt="tick">
-                    Tenant-first approach
-                </li>
-            </ul>
-        </div>
-
-        <!-- Right: Images -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: end;">
-            <!-- Large image spanning full height on left column -->
-            <img src="/public/assets/images/properties/who-are-we-p1.svg" alt="Property" style="grid-row: span 2; width: 100%; height: 445px; object-fit: cover; border-radius: 30px;">
-            <!-- Two small images stacked on right column -->
-            <img src="/public/assets/images/properties/who-are-we-p2.svg" alt="Interior 1" style="width: 100%; height: 215px; object-fit: cover; border-radius: 30px;">
-            <img src="/public/assets/images/properties/who-are-we-p3.svg" alt="Interior 2" style="width: 100%; height: 215px; object-fit: cover; border-radius: 30px;">
-        </div>
-
-    </div>
-</section>
-
-<!-- Our Services (Properties) -->
-<section style="padding: 4rem 0;">
+<!-- Our Services -->
+<section id="services-section" style="padding: 10rem 0; background-color: #fff;">
     <div class="container">
-        <div class="text-center" style="margin-bottom: 3rem;">
-            <p class="section-subtitle">What we offer</p>
-            <h2 style="font-size: 2rem;">Our Services</h2>
-            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Discover our range of housing options designed to meet your specific needs and lifestyle requirements.</p>
+        <div class="text-center" style="margin-bottom: 5rem;">
+            <p class="section-subtitle">WHO ARE WE</p>
+            <h2 class="section-title">Our Services</h2>
+            <p style="color: var(--text-light); max-width: 700px; margin: 1.5rem auto 0; font-size: 1.1rem;">Comprehensive housing solutions tailored to the needs of tenants, landlords, and local authorities.</p>
         </div>
         
-        <div class="grid grid-cols-3 gap-6">
-            <?php foreach($properties as $property): ?>
-                <?php include __DIR__ . '/../includes/property-card.php'; ?>
-            <?php endforeach; ?>
+        <style>
+            .services-page {
+                transition: opacity 0.5s ease;
+            }
+            .services-page.fade-out {
+                opacity: 0;
+            }
+            .services-page.fade-in {
+                opacity: 1;
+            }
+        </style>
+
+        <!-- Page 1 -->
+        <div class="services-page fade-in" data-page="1">
+            <div style="display: grid; grid-template-columns: repeat(3, 357.38px); gap: 1.5rem; justify-content: center;">
+                <!-- Supported Living -->
+                <div style="background: #F2F2F2; width: 357.38px; height: 800px; border-radius: 24.7px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <img src="/public/assets/images/properties/service-p1.svg" alt="Supported Living" style="width: 357.38px; height: 279.97px; object-fit: cover; border-radius: 24.7px 24.7px 0 0;">
+                    <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; text-align: center; align-items: center;">
+                        <div style="height: 140px; margin-bottom: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem; margin-bottom: 0.75rem; color: #000;">Supported Living</h3>
+                            <p style="color: var(--text-light); font-size: 0.8rem; line-height: 1.5; width: 310px; margin: 0 auto;">Our supported living service provides accommodation with tailored support for individuals with varying needs, ensuring a safe and stable living environment.</p>
+                        </div>
+                        
+                        <div style="width: 100%;">
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1.25rem; color: #000;">What's Included</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; text-align: left; width: 100%; margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tailored Care Plans
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tailored Care Plans
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Community Integration
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Life Skills Development
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: auto;">
+                            <div style="background: #fff; width: 335.97px; height: 63.4px; border-radius: 12.35px; border: 0.82px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; padding: 0 10px;">
+                                <p style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.1rem; color: #000;">Perfect For</p>
+                                <p style="font-size: 0.65rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;">Individuals with learning disabilities, mental health needs, or autism.</p>
+                            </div>
+                            
+                            <a href="#" class="btn" style="background-color: var(--primary-green); color: white; border-radius: 30px; padding: 0.8rem 1.5rem; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 200px; margin-bottom: 1rem;">Tenants Enquiry &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transitional Housing -->
+                <div style="background: #F2F2F2; width: 357.38px; height: 800px; border-radius: 24.7px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <img src="/public/assets/images/properties/service-p2.svg" alt="Transitional Housing" style="width: 357.38px; height: 279.97px; object-fit: cover; border-radius: 24.7px 24.7px 0 0;">
+                    <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; text-align: center; align-items: center;">
+                        <div style="height: 140px; margin-bottom: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem; margin-bottom: 0.75rem; color: #000;">Transitional Housing</h3>
+                            <p style="color: var(--text-light); font-size: 0.8rem; line-height: 1.5; width: 310px; margin: 0 auto;">A stepping stone towards independence. We provide short-term housing with light-touch support to help residents build confidence and tenancy skills.</p>
+                        </div>
+                        
+                        <div style="width: 100%;">
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1.25rem; color: #000;">What's Included</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; text-align: left; width: 100%; margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tenancy Training
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Budgeting Support
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Employment Assistance
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Move-on Support
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: auto;">
+                            <div style="background: #fff; width: 335.97px; height: 63.4px; border-radius: 12.35px; border: 0.82px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; padding: 0 10px;">
+                                <p style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.1rem; color: #000;">Perfect For</p>
+                                <p style="font-size: 0.65rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;">Young care leavers, individuals at risk of homelessness.</p>
+                            </div>
+                            
+                            <a href="#" class="btn" style="background-color: var(--primary-green); color: white; border-radius: 30px; padding: 0.8rem 1.5rem; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 200px; margin-bottom: 1rem;">Tenants Enquiry &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HMO Management -->
+                <div style="background: #F2F2F2; width: 357.38px; height: 800px; border-radius: 24.7px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <img src="/public/assets/images/properties/service-p3.svg" alt="HMO Management" style="width: 357.38px; height: 279.97px; object-fit: cover; border-radius: 24.7px 24.7px 0 0;">
+                    <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; text-align: center; align-items: center;">
+                        <div style="height: 140px; margin-bottom: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem; margin-bottom: 0.75rem; color: #000;">HMO Management</h3>
+                            <p style="color: var(--text-light); font-size: 0.8rem; line-height: 1.5; width: 310px; margin: 0 auto;">We take the stress out of HMO management. From licensing to tenant sourcing and maintenance, we ensure full compliance and occupancy.</p>
+                        </div>
+                        
+                        <div style="width: 100%;">
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1.25rem; color: #000;">What's Included</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; text-align: left; width: 100%; margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Article 4 Compliance
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Regular Inspections
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Full Maintenance
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tenant Sourcing
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: auto;">
+                            <div style="background: #fff; width: 335.97px; height: 63.4px; border-radius: 12.35px; border: 0.82px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; padding: 0 10px;">
+                                <p style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.1rem; color: #000;">Perfect For</p>
+                                <p style="font-size: 0.65rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;">landlords with multi-let properties.</p>
+                            </div>
+                            
+                            <a href="#" class="btn" style="background-color: var(--primary-green); color: white; border-radius: 30px; padding: 0.8rem 1.5rem; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 200px; margin-bottom: 1rem;">Tenants Enquiry &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="text-center" style="margin-top: 3rem;">
-            <a href="#" class="btn btn-outline" style="border-color: #e2e8f0; color: var(--text-dark);">View All &rarr;</a>
+
+        <!-- Page 2 (Exact same) -->
+        <div class="services-page fade-out" data-page="2" style="display: none;">
+            <div style="display: grid; grid-template-columns: repeat(3, 357.38px); gap: 1.5rem; justify-content: center;">
+                <!-- Supported Living -->
+                <div style="background: #F2F2F2; width: 357.38px; height: 800px; border-radius: 24.7px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <img src="/public/assets/images/properties/service-p1.svg" alt="Supported Living" style="width: 357.38px; height: 279.97px; object-fit: cover; border-radius: 24.7px 24.7px 0 0;">
+                    <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; text-align: center; align-items: center;">
+                        <div style="height: 140px; margin-bottom: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem; margin-bottom: 0.75rem; color: #000;">Supported Living</h3>
+                            <p style="color: var(--text-light); font-size: 0.8rem; line-height: 1.5; width: 310px; margin: 0 auto;">Our supported living service provides accommodation with tailored support for individuals with varying needs, ensuring a safe and stable living environment.</p>
+                        </div>
+                        <div style="width: 100%;">
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1.25rem; color: #000;">What's Included</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; text-align: left; width: 100%; margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tailored Care Plans
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tailored Care Plans
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Community Integration
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Life Skills Development
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: auto;">
+                            <div style="background: #fff; width: 335.97px; height: 63.4px; border-radius: 12.35px; border: 0.82px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; padding: 0 10px;">
+                                <p style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.1rem; color: #000;">Perfect For</p>
+                                <p style="font-size: 0.65rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;">Individuals with learning disabilities, mental health needs, or autism.</p>
+                            </div>
+                            <a href="#" class="btn" style="background-color: var(--primary-green); color: white; border-radius: 30px; padding: 0.8rem 1.5rem; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 200px; margin-bottom: 1rem;">Tenants Enquiry &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Transitional Housing -->
+                <div style="background: #F2F2F2; width: 357.38px; height: 800px; border-radius: 24.7px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <img src="/public/assets/images/properties/service-p2.svg" alt="Transitional Housing" style="width: 357.38px; height: 279.97px; object-fit: cover; border-radius: 24.7px 24.7px 0 0;">
+                    <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; text-align: center; align-items: center;">
+                        <div style="height: 140px; margin-bottom: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem; margin-bottom: 0.75rem; color: #000;">Transitional Housing</h3>
+                            <p style="color: var(--text-light); font-size: 0.8rem; line-height: 1.5; width: 310px; margin: 0 auto;">A stepping stone towards independence. We provide short-term housing with light-touch support to help residents build confidence and tenancy skills.</p>
+                        </div>
+                        <div style="width: 100%;">
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1.25rem; color: #000;">What's Included</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; text-align: left; width: 100%; margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tenancy Training
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Budgeting Support
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Employment Assistance
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Move-on Support
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: auto;">
+                            <div style="background: #fff; width: 335.97px; height: 63.4px; border-radius: 12.35px; border: 0.82px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; padding: 0 10px;">
+                                <p style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.1rem; color: #000;">Perfect For</p>
+                                <p style="font-size: 0.65rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;">Young care leavers, individuals at risk of homelessness.</p>
+                            </div>
+                            <a href="#" class="btn" style="background-color: var(--primary-green); color: white; border-radius: 30px; padding: 0.8rem 1.5rem; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 200px; margin-bottom: 1rem;">Tenants Enquiry &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- HMO Management -->
+                <div style="background: #F2F2F2; width: 357.38px; height: 800px; border-radius: 24.7px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <img src="/public/assets/images/properties/service-p3.svg" alt="HMO Management" style="width: 357.38px; height: 279.97px; object-fit: cover; border-radius: 24.7px 24.7px 0 0;">
+                    <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; text-align: center; align-items: center;">
+                        <div style="height: 140px; margin-bottom: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem; margin-bottom: 0.75rem; color: #000;">HMO Management</h3>
+                            <p style="color: var(--text-light); font-size: 0.8rem; line-height: 1.5; width: 310px; margin: 0 auto;">We take the stress out of HMO management. From licensing to tenant sourcing and maintenance, we ensure full compliance and occupancy.</p>
+                        </div>
+                        <div style="width: 100%;">
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1.25rem; color: #000;">What's Included</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; text-align: left; width: 100%; margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Article 4 Compliance
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Regular Inspections
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Full Maintenance
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: #000; white-space: nowrap;">
+                                    <img src="/public/assets/images/icons/tick-box.svg" width="12" height="12" alt="tick"> Tenant Sourcing
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: auto;">
+                            <div style="background: #fff; width: 335.97px; height: 63.4px; border-radius: 12.35px; border: 0.82px solid #e2e8f0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; padding: 0 10px;">
+                                <p style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.1rem; color: #000;">Perfect For</p>
+                                <p style="font-size: 0.65rem; color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;">landlords with multi-let properties.</p>
+                            </div>
+                            <a href="#" class="btn" style="background-color: var(--primary-green); color: white; border-radius: 30px; padding: 0.8rem 1.5rem; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 200px; margin-bottom: 1rem;">Tenants Enquiry &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination & View All -->
+        <div style="margin-top: 4rem; display: flex; justify-content: center; align-items: center; position: relative;">
+            <div id="services-pagination" style="display: flex; gap: 0.5rem;">
+                <span class="page-btn active" data-page="1" style="width: 32px; height: 32px; background-color: #38bdf8; color: white; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">1</span>
+                <span class="page-btn" data-page="2" style="width: 32px; height: 32px; background-color: #cbd5e1; color: white; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-weight: 600; font-size: 0.9rem; cursor: pointer;">2</span>
+            </div>
+            <a href="#" style="position: absolute; right: 0; color: #1e293b; font-weight: 600; font-size: 0.9rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">VIEW ALL</a>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const pageBtns = document.querySelectorAll('.page-btn');
+    const pages = document.querySelectorAll('.services-page');
+
+    pageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetPage = this.getAttribute('data-page');
+            const currentPage = document.querySelector('.services-page.fade-in');
+            const nextPage = document.querySelector(`.services-page[data-page="${targetPage}"]`);
+
+            if (currentPage === nextPage) return;
+
+            // Transition logic
+            currentPage.classList.remove('fade-in');
+            currentPage.classList.add('fade-out');
+
+            setTimeout(() => {
+                currentPage.style.display = 'none';
+                nextPage.style.display = 'block';
+                
+                // Trigger reflow
+                nextPage.offsetHeight; 
+
+                nextPage.classList.remove('fade-out');
+                nextPage.classList.add('fade-in');
+                
+                // Update buttons
+                pageBtns.forEach(b => {
+                    b.style.backgroundColor = '#cbd5e1';
+                    b.classList.remove('active');
+                });
+                this.style.backgroundColor = '#38bdf8';
+                this.classList.add('active');
+            }, 300);
+        });
+    });
+});
+</script>
 
 <!-- Onboarding Process -->
-<section style="padding: 4rem 0; background-color: var(--primary-navy); color: white;">
-    <div class="container text-center">
-        <h2 style="font-size: 2rem; color: white; margin-bottom: 1rem;">Our Onboarding Process</h2>
-        <p style="color: #94a3b8; margin-bottom: 4rem;">A simple, transparent, and efficient process to get you settled into your new home quickly.</p>
+<section style="background-color: #17386B; padding: 6rem 0; min-height: 523px; display: flex; align-items: center; position: relative; overflow: hidden;">
+    <div class="container" style="max-width: 1200px; position: relative; z-index: 2;">
+        <div class="text-center" style="margin-bottom: 5rem;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 40px; color: #FFFFFF; margin-bottom: 1rem;">Our Onboarding Process</h2>
+            <p style="font-size: 16px; color: #FFFFFF; opacity: 0.9; max-width: 700px; margin: 0 auto;">From application to placement, our process is transparent and supportive.</p>
+        </div>
         
-        <div style="display: flex; justify-content: space-between; align-items: center; position: relative; max-width: 800px; margin: 0 auto;">
-            <div style="position: absolute; top: 20px; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, var(--primary-green) 50%, white 50%); z-index: 0;"></div>
+        <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding: 0 2rem;">
+            <!-- Connection Line -->
+            <div style="position: absolute; top: 38px; left: 0; width: 100%; height: 6px; z-index: 0; display: flex; padding: 0 4rem;">
+                <div style="flex: 1; background-color: var(--primary-green);"></div> <!-- 1 to 2 -->
+                <div style="flex: 1; background-color: var(--primary-green);"></div> <!-- 2 to 3 -->
+                <div style="flex: 1; background: linear-gradient(to right, var(--primary-green) 50%, #FFFFFF 50%);"></div> <!-- 3 to 4 -->
+                <div style="flex: 1; background-color: #FFFFFF;"></div> <!-- 4 to 5 -->
+            </div>
             
-            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-green); display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
-                <span style="font-size: 0.9rem;">Exploration</span>
+            <!-- Step 1: Application -->
+            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 120px;">
+                <div style="width: 76px; height: 76px; background-color: var(--primary-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(45, 168, 79, 0.3);">
+                    <img src="/public/assets/images/icons/application.svg" alt="Application" style="width: 32px; height: 32px;">
+                </div>
+                <h4 style="color: #FFFFFF; font-weight: 500; font-size: 1.1rem;">Application</h4>
             </div>
-            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-green); display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
-                <span style="font-size: 0.9rem;">Discovery</span>
+
+            <!-- Step 2: Inspection -->
+            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 120px;">
+                <div style="width: 76px; height: 76px; background-color: var(--primary-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(45, 168, 79, 0.3);">
+                    <img src="/public/assets/images/icons/inspections.svg" alt="Inspection" style="width: 32px; height: 32px;">
+                </div>
+                <h4 style="color: #FFFFFF; font-weight: 500; font-size: 1.1rem;">Inspection</h4>
             </div>
-            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-green); display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
-                <span style="font-size: 0.9rem;">Verification</span>
+
+            <!-- Step 3: Compliance -->
+            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 120px;">
+                <div style="width: 76px; height: 76px; background-color: var(--primary-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(45, 168, 79, 0.3);">
+                    <img src="/public/assets/images/icons/compilance.svg" alt="Compliance" style="width: 32px; height: 32px;">
+                </div>
+                <h4 style="color: #FFFFFF; font-weight: 500; font-size: 1.1rem;">Compliance</h4>
             </div>
-            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: white; color: var(--primary-navy); display: flex; align-items: center; justify-content: center; font-weight: bold;">4</div>
-                <span style="font-size: 0.9rem;">Approval</span>
+
+            <!-- Step 4: Approval -->
+            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 120px;">
+                <div style="width: 76px; height: 76px; background-color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);">
+                    <img src="/public/assets/images/icons/approval.svg" alt="Approval" style="width: 32px; height: 32px;">
+                </div>
+                <h4 style="color: #FFFFFF; font-weight: 500; font-size: 1.1rem;">Approval</h4>
             </div>
-            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: white; color: var(--primary-navy); display: flex; align-items: center; justify-content: center; font-weight: bold;">5</div>
-                <span style="font-size: 0.9rem;">Placement</span>
+
+            <!-- Step 5: Placement -->
+            <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 120px;">
+                <div style="width: 76px; height: 76px; background-color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);">
+                    <img src="/public/assets/images/icons/placement.svg" alt="Placement" style="width: 32px; height: 32px;">
+                </div>
+                <h4 style="color: #FFFFFF; font-weight: 500; font-size: 1.1rem;">Placement</h4>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Latest Blogs & Posts -->
-<section style="padding: 4rem 0; background-color: var(--primary-green);">
-    <div class="container text-center">
-        <p style="color: white; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">News & Insights</p>
-        <h2 style="font-size: 2rem; color: white; margin-bottom: 3rem;">Latest Blogs & Posts</h2>
-        
-        <div class="grid grid-cols-3 gap-6 text-left">
+<section id="blogs-section" style="background-color: var(--primary-green); padding: 5rem 0 4rem;">
+    <style>
+        .blog-progress-container { display: flex; gap: 12px; justify-content: center; margin-top: 3rem; }
+        .blog-progress-bar { width: 90px; height: 4px; background-color: rgba(255,255,255,0.35); border-radius: 2px; overflow: hidden; cursor: pointer; }
+        .blog-progress-fill { width: 0%; height: 100%; background-color: #ffffff; border-radius: 2px; }
+        .blog-progress-bar.active .blog-progress-fill { animation: blog-fill 5s linear forwards; }
+        .blog-progress-bar.done .blog-progress-fill { width: 100%; }
+        @keyframes blog-fill { from { width: 0%; } to { width: 100%; } }
+        .blog-slide { display: none; }
+        .blog-slide.active { display: grid; }
+    </style>
+
+    <div class="container" style="max-width: 1200px;">
+        <div class="text-center" style="margin-bottom: 3.5rem;">
+            <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 0.75rem;">WHAT'S TRENDING</p>
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2.6rem; color: #ffffff; margin: 0;">Latest Blogs &amp; Posts</h2>
+        </div>
+
+        <!-- Slide 1 -->
+        <div class="blog-slide active" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
             <?php foreach($blogs as $blog): ?>
                 <?php include __DIR__ . '/../includes/blog-card.php'; ?>
             <?php endforeach; ?>
         </div>
-    </div>
-</section>
 
-<!-- Become a Tenant CTA -->
-<section style="padding: 4rem 0;">
-    <div class="container" style="max-width: 1120px;">
-        <div class="card" style="font-family: var(--font-family); background-color: var(--primary-navy); color: white; padding: 3.5rem; text-align: center; border-radius: 40px; position: relative; overflow: hidden; min-height: 260px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <img src="/public/assets/images/icons/globe.svg" alt="Decoration" style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%); width: 100px; height: 100px;">
-            
-            <h2 style="font-size: 2.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">Become a Tenants</h2>
-            <p style="color: #e2e8f0; margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.6;">
-                Fusce venenatis tellus a felis scelerisque.<br>
-                venenatis tellus a felis scelerisque.
-            </p>
-            <a href="#" class="btn btn-primary" style="padding: 0.75rem 2rem; border-radius: 30px; font-weight: 500;">Tenants Enquiry</a>
+        <!-- Slide 2 -->
+        <div class="blog-slide" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+            <?php foreach($blogs_slide2 as $blog): ?>
+                <?php include __DIR__ . '/../includes/blog-card.php'; ?>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="blog-slide" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+            <?php foreach($blogs_slide3 as $blog): ?>
+                <?php include __DIR__ . '/../includes/blog-card.php'; ?>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="blog-progress-container">
+            <div class="blog-progress-bar active" data-slide="0"><div class="blog-progress-fill"></div></div>
+            <div class="blog-progress-bar"         data-slide="1"><div class="blog-progress-fill"></div></div>
+            <div class="blog-progress-bar"         data-slide="2"><div class="blog-progress-fill"></div></div>
         </div>
     </div>
 </section>
+
+<script>
+(function() {
+    const DURATION = 5000; // ms per slide
+    const bars   = Array.from(document.querySelectorAll('.blog-progress-bar'));
+    const slides = Array.from(document.querySelectorAll('.blog-slide'));
+    let current = 0;
+    let timer   = null;
+
+    function activate(idx) {
+        idx = ((idx % slides.length) + slides.length) % slides.length;
+
+        // Hide all slides
+        slides.forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
+
+        // Reset all bars
+        bars.forEach((b, i) => {
+            b.classList.remove('active', 'done');
+            // Force reflow to restart animation when class is re-added
+            const fill = b.querySelector('.blog-progress-fill');
+            fill.style.animation = 'none';
+            fill.offsetHeight; // reflow
+            fill.style.animation = '';
+
+            if (i < idx) {
+                // Already-passed bars: fully filled, no animation
+                b.classList.add('done');
+            }
+        });
+
+        // Show chosen slide
+        slides[idx].classList.add('active');
+        slides[idx].style.display = 'grid';
+
+        // Activate chosen bar (triggers @keyframes via CSS)
+        bars[idx].classList.add('active');
+
+        current = idx;
+    }
+
+    function next() {
+        activate((current + 1) % slides.length);
+    }
+
+    function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, DURATION);
+    }
+
+    // Click bar to jump to slide
+    bars.forEach((bar, i) => {
+        bar.addEventListener('click', () => { activate(i); startTimer(); });
+    });
+
+    // Initialise
+    activate(0);
+    startTimer();
+})();
+</script>
+
+
+
+<!-- Become a Tenant CTA -->
+ <?php require_once __DIR__ . '/../includes/become-tenants.php'; ?>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
