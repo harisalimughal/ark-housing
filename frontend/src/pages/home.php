@@ -175,10 +175,10 @@ require_once __DIR__ . '/../includes/who-are-we.php';
 
 
 <!-- Our Services -->
-<section id="services-section" style="padding: 10rem 0; background-color: #fff;">
+<section id="services-section" style="padding: 4rem 0 10rem; background-color: #fff;">
     <div class="container">
         <div class="text-center" style="margin-bottom: 5rem;">
-            <p class="section-subtitle">WHO ARE WE</p>
+            <p class="section-subtitle">WHO WE OFFER</p>
             <h2 class="section-title">Our Services</h2>
             <p style="color: var(--text-light); max-width: 700px; margin: 1.5rem auto 0; font-size: 1.1rem;">Comprehensive housing solutions tailored to the needs of tenants, landlords, and local authorities.</p>
         </div>

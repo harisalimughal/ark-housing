@@ -4,7 +4,7 @@ $hero_title = "Raising Standards in <br>Supported Living";
 
 <style>
 .who-we-are {
-    padding: 80px 0;
+    padding: 80px 0 20px;
     background: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
