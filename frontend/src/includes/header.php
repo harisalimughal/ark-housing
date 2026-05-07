@@ -252,13 +252,13 @@ function is_active($paths, $current_page) {
                     </ul>
                 </li>
                 <li class="dropdown" style="position: relative;">
-                    <a href="/tenant-inquiry.php" class="<?php echo is_active(['/tenant-inquiry.php', '/tenant-support.php'], $current_page); ?>" style="display: flex; align-items: center; gap: 0.25rem;">
+                    <a href="/tenant-support.php" class="<?php echo is_active(['/tenant-inquiry.php', '/tenant-support.php'], $current_page); ?>" style="display: flex; align-items: center; gap: 0.25rem;">
                         Tenants
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
                     </a> 
                     <ul class="dropdown-menu">
-                        <li><a href="/tenant-inquiry.php">Tenant Inquiry Form</a></li>
                         <li><a href="/tenant-support.php">Tenant Support</a></li>
+                        <li><a href="/tenant-inquiry.php">Tenant Inquiry Form</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" style="position: relative;">

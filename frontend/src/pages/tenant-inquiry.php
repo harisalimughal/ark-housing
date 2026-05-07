@@ -6,24 +6,451 @@ require_once __DIR__ . '/../includes/header.php';
 $hero_title = 'Tenant Inquiry';
 $hero_subtitle = 'Home <span style="opacity: 0.7;">&nbsp;>&nbsp;</span> Tenant Inquiry';
 require_once __DIR__ . '/../includes/hero.php';
-?>
+?><!-- Header Section -->
+<section style="padding: 60px 0 20px 0; background-color: #ffffff;">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 48px; color: #1a1a2e; margin-bottom: 12px;">Tenants Enquiry</h2>
+        <p style="font-family: 'Poppins', sans-serif; color: #64748b; font-size: 16px;">Partner with ARK Housing for guaranteed rent and hassle-free management.</p>
+    </div>
+</section>
 
-<section style="padding: 8rem 0;">
+<!-- Multi-step Form Section -->
+<section style="padding: 40px 0 100px 0; background-color: #ffffff;">
     <div class="container">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p class="section-subtitle">Join Us</p>
-            <h2 class="section-title">Find Your New Home with Ark Housing</h2>
-            <p style="color: var(--text-light); margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                We are here to support you in finding a safe and comfortable place to live. 
-                Tell us a bit about your needs, and our placement team will work with you to find the right accommodation.
-            </p>
-            <!-- Form Placeholder -->
-            <div style="margin-top: 3rem; padding: 3rem; background: #f8fafc; border-radius: 20px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <p style="text-align: center; color: #64748b;">[Detailed tenant inquiry form will be implemented here]</p>
+        <div style="max-width: 1200px; margin: 0 auto; background: #f8fafc; border-radius: 50px; display: flex; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.05); min-height: 800px;">
+            
+            <!-- Left Sidebar: Progress -->
+            <div style="width: 420px; background-color: #1a3a63; padding: 60px 30px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #ffffff; margin-bottom: 50px;">Application Progress</h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 30px;">
+                        <!-- Step 1: Active -->
+                        <div class="step-1" style="display: flex; align-items: center; gap: 20px;">
+                            <div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600; background-color: rgba(255,255,255,0.1);">1</div>
+                            <span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 16px; color: #ffffff;">Personal Details</span>
+                        </div>
+                        <!-- ... other steps ... -->
+                        <div class="step-2" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">2</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">HouseHold</span></div>
+                        <div class="step-3" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">3</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">Benefits</span></div>
+                        <div class="step-4" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">4</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">Support Worker</span></div>
+                        <div class="step-5" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">5</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">Support Needs</span></div>
+                        <div class="step-6" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">6</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">Accomodation</span></div>
+                        <div class="step-7" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">7</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">Background</span></div>
+                        <div class="step-8" style="display: flex; align-items: center; gap: 20px; opacity: 0.4;"><div class="circle" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 600;">8</div><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #ffffff;">Notes</span></div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Footer: Phone Box -->
+                <div style="width: 360px; height: 120px; background: rgba(255,255,255,0.05); border-radius: 34.4px; display: flex; flex-direction: column; justify-content: center; padding: 0 30px; margin: 0 auto;">
+                    <p style="font-family: 'Poppins', sans-serif; color: #ffffff; opacity: 0.7; font-size: 14px; margin-bottom: 5px;">Need help? Call our support line on</p>
+                    <a href="tel:+442012345678" style="font-family: 'Poppins', sans-serif; color: #ffffff; font-weight: 600; font-size: 19px; text-decoration: none; display: block; transition: opacity 0.2s;" onmouseenter="this.style.opacity='0.8'" onmouseleave="this.style.opacity='1'">+44 (0) 20 1234 5678</a>
+                </div>
             </div>
+
+            <!-- Right Content Area: Form -->
+            <div style="flex: 1; padding: 60px 80px; display: flex; flex-direction: column; position: relative;">
+                
+                <!-- Step 1: Personal Details -->
+                <div id="step-1" class="form-step">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 1 - Personal Details</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Full Name</label>
+                                <input type="text" placeholder="Name" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; transition: border-color 0.3s ease;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Date of Birth</label>
+                                <input type="date" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #64748b;">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Email</label>
+                                <input type="email" placeholder="@.com" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Phone Number</label>
+                                <input type="tel" placeholder="+44 345 34 654" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 40px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Current Address</label>
+                            <textarea placeholder="List the properties you are interested in letting" style="width: 100%; height: 120px; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; resize: none;"></textarea>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" disabled style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #94a3b8; cursor: not-allowed; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(2)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background-color 0.3s ease;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 2: Household -->
+                <div id="step-2" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 2 — Household</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Number of people moving in</label>
+                                <input type="text" placeholder="Name" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Any Children?</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Number and ages of children (if applicable)</label>
+                            <input type="text" placeholder="e.g 2 children ages 5 and 8" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Any pets?</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Pet details</label>
+                                <input type="text" placeholder="Type of pet" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(1)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(3)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Step 3: Benefits -->
+                <div id="step-3" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 3 — Benefits Information</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Benefit Type</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="universal-credit">Universal Credit</option>
+                                    <option value="housing-benefit">Housing Benefit</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Upload proof of benefits</label>
+                                <div style="position: relative;">
+                                    <input type="file" id="proof-upload" style="display: none;">
+                                    <label for="proof-upload" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 25px; background-color: #72C3F04D; color: #1a3a63; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; border: none; transition: background 0.3s ease;">
+                                        Choose file <img src="/public/assets/images/icons/link.svg" alt="Link" style="width: 14px; height: 14px; filter: brightness(0) saturate(100%) invert(17%) sepia(35%) div(404%) hue-rotate(180deg) brightness(95%) contrast(93%);" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M10%2013a5%205%200%200%200%207.54.54l3-3a5%205%200%200%200-7.07-7.07l-1.72%201.71%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M14%2011a5%205%200%200%200-7.54-.54l-3%203a5%205%200%200%200%207.07%207.07l1.71-1.71%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E'">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Monthly housing element amount (£)</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Payment frequency</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="monthly">Monthly</option>
+                                    <option value="weekly">Weekly</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Payments made to</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="me">Me Directly</option>
+                                    <option value="landlord">Landlord</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Any deductions?</label>
+                                <input type="text" placeholder="." style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(2)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(4)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 4: Support Worker -->
+                <div id="step-4" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 4 — Support Worker</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="margin-bottom: 40px;">
+                            <p style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #1a1a2e; margin-bottom: 20px;">Do you have a support worker?</p>
+                            <div style="display: flex; gap: 40px;">
+                                <label style="display: flex; align-items: center; gap: 12px; cursor: pointer;">
+                                    <input type="radio" name="has_support" value="yes" style="appearance: none; width: 30px; height: 30px; border: 1.5px solid #cbd5e1; border-radius: 50%; cursor: pointer; position: relative; margin: 0; outline: none;" onchange="this.style.borderColor=this.checked?'#22c55e':'#cbd5e1'">
+                                    <span style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #1a1a2e;">Yes</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 12px; cursor: pointer;">
+                                    <input type="radio" name="has_support" value="no" style="appearance: none; width: 30px; height: 30px; border: 1.5px solid #cbd5e1; border-radius: 50%; cursor: pointer; position: relative; margin: 0; outline: none;" onchange="this.style.borderColor=this.checked?'#22c55e':'#cbd5e1'">
+                                    <span style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #1a1a2e;">No</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Support worker name</label>
+                                <input type="text" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Organization</label>
+                                <input type="text" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Phone</label>
+                                <input type="tel" placeholder="+44 345 34 654" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Email</label>
+                                <input type="email" placeholder="@.com" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(3)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(5)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 5: Support Needs -->
+                <div id="step-5" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 12px;">Section 5 — Support Needs</h3>
+                    <p style="font-family: 'Poppins', sans-serif; color: #64748b; font-size: 16px; margin-bottom: 40px;">Please select all that apply.</p>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
+                            <?php 
+                            $needs = ['Mental Health', 'Learning Disabilities', 'Physical Disabilities', 'Sensory Impairment', 'Substance Misuse', 'Domestic Abuse', 'Homelessness'];
+                            foreach($needs as $need): ?>
+                            <label style="display: flex; align-items: center; gap: 15px; padding: 20px 25px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; cursor: pointer; transition: all 0.3s ease;">
+                                <input type="checkbox" style="display: none;" onchange="const parent = this.parentElement; const circle = parent.querySelector('.check-circle'); if(this.checked) { parent.style.borderColor = '#22c55e'; circle.style.backgroundColor = '#22c55e'; circle.style.borderColor = '#22c55e'; circle.querySelector('svg').style.opacity = '1'; } else { parent.style.borderColor = '#e2e8f0'; circle.style.backgroundColor = 'transparent'; circle.style.borderColor = '#cbd5e1'; circle.querySelector('svg').style.opacity = '0.3'; }">
+                                <div class="check-circle" style="width: 28px; height: 28px; border-radius: 8px; border: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3; transition: opacity 0.3s ease;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <span style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #1a1a2e; font-weight: 500;"><?php echo $need; ?></span>
+                            </label>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(4)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(6)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 6: Accommodation Requirements -->
+                <div id="step-6" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 6 — Accommodation Requirements</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Property type required</label>
+                                <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                    <option value="studio">Studio</option>
+                                    <option value="1-bed">1 Bedroom</option>
+                                    <option value="2-bed">2 Bedroom</option>
+                                    <option value="hmo">HMO</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Preferred locations</label>
+                                <input type="text" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Earliest move-in date</label>
+                                <input type="date" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #64748b;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 10px;">Accessibility needs</label>
+                                <input type="text" placeholder="e.g. ground floor only" style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(5)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(7)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 7: Background -->
+                <div id="step-7" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 7 — Background</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #1a1a2e; margin-bottom: 12px;">Do you have any rent arrears?</label>
+                            <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #1a1a2e; margin-bottom: 12px;">Any previous evictions?</label>
+                            <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #1a1a2e; margin-bottom: 12px;">Any criminal convictions? (optional)</label>
+                            <textarea placeholder="if yes please provide details" style="width: 100%; height: 140px; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; resize: none;"></textarea>
+                        </div>
+
+                        <div style="margin-bottom: 40px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #1a1a2e; margin-bottom: 12px;">Do you have a guarantor?</label>
+                            <select style="width: 100%; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; color: #1a1a2e; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 16px;">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(6)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="button" onclick="nextStep(8)" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                Next <span>&rsaquo;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 8: Additional Notes -->
+                <div id="step-8" class="form-step" style="display: none;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 24px; color: #1a1a2e; margin-bottom: 40px;">Section 8 — Additional Notes</h3>
+                    
+                    <form style="display: flex; flex-direction: column; min-height: 550px;">
+                        <div style="margin-bottom: 40px;">
+                            <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px; color: #1a1a2e; margin-bottom: 12px;">Any other information we should know?</label>
+                            <textarea style="width: 100%; height: 280px; padding: 16px 20px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 14px; outline: none; resize: none;"></textarea>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; margin-top: auto;">
+                            <button type="button" onclick="nextStep(7)" style="padding: 14px 40px; background: none; border: 1px solid #e2e8f0; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <span>&lsaquo;</span> Back
+                            </button>
+                            <button type="submit" style="padding: 14px 40px; background-color: #22c55e; border: none; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: #ffffff; cursor: pointer; transition: background-color 0.3s ease;">
+                                Submit Tenant Enquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
+<script>
+function nextStep(step) {
+    // Hide all steps
+    document.querySelectorAll('.form-step').forEach(el => el.style.display = 'none');
+    
+    // Show target step
+    const target = document.getElementById('step-' + step);
+    if (target) {
+        target.style.display = 'block';
+    }
+
+    // Update sidebar circles
+    const steps = [1, 2, 3, 4, 5, 6, 7, 8];
+    steps.forEach(s => {
+        const sidebarStep = document.querySelector('.step-' + s);
+        if (sidebarStep) {
+            const circle = sidebarStep.querySelector('.circle');
+            if (s < step) {
+                // Completed step
+                sidebarStep.style.opacity = '1';
+                circle.style.backgroundColor = '#48A7DD';
+                circle.style.borderColor = '#48A7DD';
+                circle.style.color = '#ffffff';
+            } else if (s === step) {
+                // Active step
+                sidebarStep.style.opacity = '1';
+                circle.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                circle.style.borderColor = '#ffffff';
+                circle.style.color = '#ffffff';
+            } else {
+                // Future step
+                sidebarStep.style.opacity = '0.4';
+                circle.style.backgroundColor = 'transparent';
+                circle.style.borderColor = '#ffffff';
+                circle.style.color = '#ffffff';
+            }
+        }
+    });
+
+    // Scroll to top of form
+    window.scrollTo({
+        top: document.querySelector('.header-main').offsetHeight + 100,
+        behavior: 'smooth'
+    });
+}
+</script>
 
 <?php 
 require_once __DIR__ . '/../includes/become-tenants.php';

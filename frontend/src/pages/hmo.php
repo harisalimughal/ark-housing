@@ -75,9 +75,12 @@ require_once __DIR__ . '/../includes/header.php';
         width: 48px;
         height: 48px;
         flex-shrink: 0;
-        /* The provided SVG is a circle with a right arrow. 
-           Rotating it 90deg to match the down arrow in the screenshot */
         transform: rotate(90deg);
+        transition: transform 0.3s ease;
+    }
+
+    .hmo-point:hover .hmo-point-icon {
+        transform: rotate(0deg);
     }
 
     .hmo-point-content {
