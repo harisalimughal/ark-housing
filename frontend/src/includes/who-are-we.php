@@ -27,20 +27,20 @@ $hero_title = "Raising Standards in <br>Supported Living";
 }
 
 .section-subtitle {
-    color: #3b82f6;
-    font-weight: 600;
-    letter-spacing: 2px;
+    color: #48A7DD;
+    font-weight: 500;
+    letter-spacing: 0.15em;
     font-size: 14px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 0.75rem;
 }
 
 .who-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 39.8px;
-    line-height: 47px;
-    letter-spacing: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
     color: #000;
     margin-bottom: 24px;
     max-width: 600px;
@@ -93,14 +93,15 @@ $hero_title = "Raising Standards in <br>Supported Living";
 
 .who-images {
     display: grid;
-    grid-template-columns: 260px 260px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 222px 222px;
     gap: 16px;
-    width: fit-content;
+    width: 100%;
+    max-width: 536px;
 }
 
 .who-images img {
-    width: 260px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
@@ -151,6 +152,7 @@ $hero_title = "Raising Standards in <br>Supported Living";
     .who-images {
         grid-template-columns: 1fr;
         grid-template-rows: 280px 200px 200px;
+        max-width: 100%;
     }
 
     .img-large {
@@ -213,7 +215,7 @@ $hero_title = "Raising Standards in <br>Supported Living";
             <div class="who-images-spacer"></div>
 
             <div class="who-images">
-                <img src="/public/assets/images/properties/who-are-we-p1.svg" class="img-large" alt="Property exterior">
+                <img src="/public/assets/images/properties/home-center2.jpg" class="img-large" alt="Property exterior">
                 <img src="/public/assets/images/properties/who-are-we-p2.svg" class="img-small-1" alt="Property bedroom">
                 <img src="/public/assets/images/properties/who-are-we-p3.svg" class="img-small-2" alt="Property living room">
             </div>

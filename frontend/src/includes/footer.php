@@ -2,7 +2,13 @@
     <div class="container grid grid-cols-4 gap-8" style="margin-bottom: var(--spacing-12); color: #000;">
         <!-- Column 1: Info -->
         <div>
-            <img src="/public/assets/images/logos/logo-full.png" alt="Ark Housing Group" style="height: 40px; margin-bottom: var(--spacing-4);">
+            <a href="/" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: var(--spacing-4);">
+                <img src="/public/assets/images/logos/logo.svg" class="logo-icon" alt="Ark Housing" style="height: 40px; width: auto; flex-shrink: 0;">
+                <div style="display: flex; flex-direction: column; line-height: 1.15;">
+                    <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #17386B; white-space: nowrap;">Ark Housing <span style="color: #1FAF38;">Group</span></span>
+                    <span style="font-family: 'Poppins', sans-serif; font-size: 9px; color: #3EA1D8; font-weight: 500; white-space: nowrap;">Your Safe Passage to a Stable Home</span>
+                </div>
+            </a>
             <p style="margin-bottom: var(--spacing-4); font-size: 0.95rem; font-weight: 500;">
                 2728 Hickory Street<br>
                 Salt Lake City, UT 84104
@@ -19,12 +25,12 @@
         <div>
             <h4 style="margin-bottom: 1.25rem; font-weight: 600; font-size: 1.1rem; color: #000;">Quick Links</h4>
             <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; font-weight: 500;">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.php">About</a></li>
                 <li><a href="#">Listings</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Become a Agent</a></li>
+                <li><a href="/services.php">Services</a></li>
+                <li><a href="/blogs.php">Blogs</a></li>
+                <li><a href="/tenant-inquiry.php">Become a Tenant</a></li>
             </ul>
         </div>
         
@@ -32,12 +38,12 @@
         <div>
             <h4 style="margin-bottom: 1.25rem; font-weight: 600; font-size: 1.1rem; color: #000;">Discovery</h4>
             <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; font-weight: 500;">
-                <li><a href="#">Landlord Enquiry</a></li>
-                <li><a href="#">RSL Partner</a></li>
-                <li><a href="#">Guaranteed Rent</a></li>
-                <li><a href="#">HMO</a></li>
-                <li><a href="#">Transitional Housing</a></li>
-                <li><a href="#">FAQ's</a></li>
+                <li><a href="/landlord-enquiry.php">Landlord Enquiry</a></li>
+                <li><a href="/partnerships.php">RSL Partner</a></li>
+                <li><a href="/guaranteed-rent.php">Guaranteed Rent</a></li>
+                <li><a href="/hmo.php">HMO</a></li>
+                <li><a href="/transitional.php">Transitional Housing</a></li>
+                <li><a href="/all-faqs.php">FAQ's</a></li>
             </ul>
         </div>
         
@@ -60,10 +66,10 @@
     </div>
     
     <!-- Bottom Footer -->
-    <div style="background-color: #111111; height: 50px; display: flex; align-items: center;">
-        <div class="container flex justify-between items-center" style="font-size: 0.9rem; color: #e5e7eb; width: 100%;">
-            <p>&copy; 2025 TechClues. All rights reserved.</p>
-            <div class="flex gap-6">
+    <div style="background-color: #111111; min-height: 50px; padding: 15px 0; display: flex; align-items: center;">
+        <div class="container flex flex-col-1024 justify-between items-center" style="font-size: 0.9rem; color: #e5e7eb; width: 100%; gap: 15px;">
+            <p style="margin: 0;">&copy; 2025 TechClues. All rights reserved.</p>
+            <div class="flex flex-col-1024 gap-6" style="gap: 15px;">
                 <a href="#" style="color: #e5e7eb;">Terms and Conditions</a>
                 <a href="#" style="color: #e5e7eb;">Disclaimer</a>
                 <a href="#" style="color: #e5e7eb;">Privacy Policy</a>

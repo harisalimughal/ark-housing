@@ -8,7 +8,7 @@
                 Fusce venenatis tellus a felis scelerisque.<br>
                 venenatis tellus a felis scelerisque.
             </p>
-            <a href="#" class="btn btn-primary" style="padding: 0.75rem 2rem; border-radius: 30px; font-weight: 500;">Tenants Enquiry</a>
+            <a href="/tenant-inquiry" class="btn btn-primary" style="padding: 0.75rem 2rem; border-radius: 30px; font-weight: 500;">Tenants Enquiry</a>
         </div>
     </div>
 </section>

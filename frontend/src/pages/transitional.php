@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
@@ -133,6 +133,7 @@ require_once __DIR__ . '/../includes/header.php';
 <?php
 $hero_title = 'Transitional Housing';
 $hero_subtitle = 'Home <span style="opacity: 0.7;">&nbsp;>&nbsp;</span> Transitional Housing';
+$hero_image = '/public/assets/images/properties/uk-houses/uk-7.jpg';
 require_once __DIR__ . '/../includes/hero.php';
 ?>
 
@@ -151,7 +152,7 @@ require_once __DIR__ . '/../includes/hero.php';
             </div>
         </div>
         <div class="trans-image-container">
-            <img src="/public/assets/images/properties/hmo.png" alt="Transitional Housing Property" class="trans-main-image">
+            <img src="/public/assets/images/properties/uk-houses/uk-6.jpg" alt="Transitional Housing Property" class="trans-main-image">
         </div>
     </div>
 
@@ -227,3 +228,7 @@ require_once __DIR__ . '/../includes/hero.php';
 require_once __DIR__ . '/../includes/become-tenants.php';
 require_once __DIR__ . '/../includes/footer.php'; 
 ?>
+
+
+
+

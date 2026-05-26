@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
@@ -28,9 +28,9 @@ require_once __DIR__ . '/../includes/header.php';
     .hmo-title {
         font-family: 'Inter', sans-serif;
         font-weight: 600;
-        font-size: 44.11px;
-        line-height: 53.7px;
-        letter-spacing: -3%;
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
         text-transform: capitalize;
         color: #000000;
         margin-bottom: 24px;
@@ -124,11 +124,25 @@ require_once __DIR__ . '/../includes/header.php';
             line-height: 1.2;
         }
     }
+
+    @media (max-width: 992px) {
+        .sa-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 40px 24px !important;
+        }
+    }
+    @media (max-width: 600px) {
+        .sa-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px 0 !important;
+        }
+    }
 </style>
 
 <?php
 $hero_title = 'HMO Management';
 $hero_subtitle = 'Home <span style="opacity: 0.7;">&nbsp;>&nbsp;</span> HMO';
+$hero_image = '/public/assets/images/properties/uk-houses/uk-5.jpg';
 require_once __DIR__ . '/../includes/hero.php';
 ?>
 
@@ -142,7 +156,7 @@ require_once __DIR__ . '/../includes/hero.php';
             </p>
         </div>
         <div class="hmo-image-container">
-            <img src="/public/assets/images/properties/hmo.png" alt="HMO Property" class="hmo-main-image">
+            <img src="/public/assets/images/properties/uk-houses/uk-3.jpg" alt="HMO Property" class="hmo-main-image">
         </div>
     </div>
 
@@ -207,7 +221,7 @@ require_once __DIR__ . '/../includes/hero.php';
         </div>
 
         <!-- Points Grid -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; margin-bottom: 80px;">
+        <div class="sa-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; margin-bottom: 80px;">
             <!-- Point 1 -->
             <div style="display: flex; gap: 20px; align-items: flex-start;">
                 <img src="/public/assets/images/icons/right-arrow.svg" alt="" style="width: 50px; height: 50px; flex-shrink: 0; filter: brightness(0) invert(1);">
@@ -276,3 +290,7 @@ require_once __DIR__ . '/../includes/hero.php';
 require_once __DIR__ . '/../includes/become-tenants.php';
 require_once __DIR__ . '/../includes/footer.php'; 
 ?>
+
+
+
+

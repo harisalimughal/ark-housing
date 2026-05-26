@@ -1,10 +1,11 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <?php
 $hero_title = 'Frequently Asked Questions';
 $hero_subtitle = 'Home <span style="opacity: 0.7;">&nbsp;>&nbsp;</span> FAQs';
+$hero_image = '/public/assets/images/properties/uk-houses/uk-10.jpg';
 require_once __DIR__ . '/../includes/hero.php';
 ?>
 
@@ -120,3 +121,7 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
 require_once __DIR__ . '/../includes/become-tenants.php';
 require_once __DIR__ . '/../includes/footer.php'; 
 ?>
+
+
+
+

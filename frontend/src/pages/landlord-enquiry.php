@@ -1,12 +1,26 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <?php
 $hero_title = 'Landlord Enquiry';
 $hero_subtitle = 'Home <span style="opacity: 0.7;">&nbsp;>&nbsp;</span> Landlord Enquiry';
+$hero_image = '/public/assets/images/properties/uk-houses/uk-8.jpg';
 require_once __DIR__ . '/../includes/hero.php';
 ?>
+<style>
+    @media (max-width: 768px) {
+        .form-grid-2 {
+            grid-template-columns: 1fr !important;
+        }
+        #landlord-enquiry-form > div {
+            padding: 20px !important;
+        }
+        .container > div {
+            padding: 30px 20px !important;
+        }
+    }
+</style>
 <!-- Enquiry Form Section -->
 <section style="padding: 80px 0; background-color: #f8fafc;">
     <div class="container">
@@ -17,7 +31,7 @@ require_once __DIR__ . '/../includes/hero.php';
             </div>
 
             <form id="landlord-enquiry-form" action="/api/submit-enquiry.php" method="POST">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
                     <!-- First Name -->
                     <div>
                         <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 8px;">Full Name</label>
@@ -30,7 +44,7 @@ require_once __DIR__ . '/../includes/hero.php';
                     </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
                     <!-- Email -->
                     <div>
                         <label style="display: block; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px; color: #1a1a2e; margin-bottom: 8px;">Email</label>
@@ -106,6 +120,10 @@ document.getElementById('landlord-enquiry-form').addEventListener('submit', func
         }, 150);
         
     }, 250);
+
+    setTimeout(() => {
+        window.showToast && window.showToast("Enquiry submitted! We'll be in touch soon.");
+    }, 400);
 });
 
 // Add focus effect to inputs
@@ -121,5 +139,7 @@ inputs.forEach(input => {
     });
 });
 </script>
-require_once __DIR__ . '/../includes/footer.php'; 
-?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
+
+
+

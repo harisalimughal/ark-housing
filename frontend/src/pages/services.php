@@ -1,21 +1,39 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <?php
 $hero_title = 'Our Services';
 $hero_subtitle = 'Home <span style="opacity: 0.7;">&nbsp;>&nbsp;</span> Our Services';
+$hero_image = '/public/assets/images/properties/uk-houses/uk-1.jpg';
 require_once __DIR__ . '/../includes/hero.php';
 ?>
+
+<style>
+    @media (max-width: 768px) {
+        .pop-card > div[style*="padding: 60px 50px"] {
+            padding: 24px 20px !important;
+        }
+        .pop-card div[style*="width: 335.97px"] {
+            width: 100% !important;
+            height: auto !important;
+        }
+        .pop-card a[style*="padding: 12px 32px"] {
+            font-size: 13px !important;
+            padding: 10px 22px !important;
+            align-self: center;
+        }
+    }
+</style>
 
 <!-- HMO Management Service -->
 <section style="padding: 80px 0; background-color: #ffffff;">
     <div class="container">
-        <div style="width: 1029px; height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0PX rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative;">
+        <div class="flex-col-1024 pop-card" style="width: 100%; max-width: 1029px; height: auto; min-height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0PX rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative;">
             
             <!-- Left: Image -->
-            <div style="width: 545px; height: 100%;">
-                <img src="/public/assets/images/icons/service.svg" alt="HMO Management" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="flex: none; width: 100%; max-width: 545px; height: auto; min-height: 424px;">
+                <img src="/public/assets/images/properties/uk-houses/uk-13.jpg" alt="HMO Management" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
 
             <!-- Right: Content -->
@@ -26,7 +44,7 @@ require_once __DIR__ . '/../includes/hero.php';
                 </p>
 
                 <h4 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #1a1a2e; margin-bottom: 16px;">What's Included</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
+                <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
                     <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; color: #1a1a2e; font-weight: 500;">
                         <div style="width: 18px; height: 18px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <img src="/public/assets/images/icons/tick.svg" alt="" width="10">
@@ -60,8 +78,8 @@ require_once __DIR__ . '/../includes/hero.php';
                 </div>
 
                 <!-- Action Button -->
-                <a href="/landlord-enquiry" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
-                    Landlord Enquiry <span>&rarr;</span>
+                <a href="/hmo.php" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
+                    Learn About HMO <span>&rarr;</span>
                 </a>
             </div>
         </div>
@@ -71,11 +89,11 @@ require_once __DIR__ . '/../includes/hero.php';
 <!-- Transitional Housing Service -->
 <section style="padding: 80px 0; background-color: #ffffff; padding-top: 0;">
     <div class="container">
-        <div style="width: 1029px; height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0px rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative; flex-direction: row-reverse;">
+        <div class="flex-col-1024 pop-card" style="width: 100%; max-width: 1029px; height: auto; min-height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0px rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative; flex-direction: row-reverse;">
             
             <!-- Left: Image -->
-            <div style="width: 545px; height: 100%;">
-                <img src="/public/assets/images/icons/service.svg" alt="Transitional Housing" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="flex: none; width: 100%; max-width: 545px; height: auto; min-height: 424px;">
+                <img src="/public/assets/images/properties/uk-houses/uk-14.jpg" alt="Transitional Housing" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
 
             <!-- Right: Content -->
@@ -86,7 +104,7 @@ require_once __DIR__ . '/../includes/hero.php';
                 </p>
 
                 <h4 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #1a1a2e; margin-bottom: 16px;">What's Included</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
+                <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
                     <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; color: #1a1a2e; font-weight: 500;">
                         <div style="width: 18px; height: 18px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <img src="/public/assets/images/icons/tick.svg" alt="" width="10">
@@ -120,8 +138,8 @@ require_once __DIR__ . '/../includes/hero.php';
                 </div>
 
                 <!-- Action Button -->
-                <a href="/tenant-enquiry" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
-                    Tenants Enquiry <span>&rarr;</span>
+                <a href="/transitional.php" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
+                    Learn About Transitional Housing <span>&rarr;</span>
                 </a>
             </div>
         </div>
@@ -131,11 +149,11 @@ require_once __DIR__ . '/../includes/hero.php';
 <!-- Supported Living Service -->
 <section style="padding: 80px 0; background-color: #ffffff; padding-top: 0;">
     <div class="container">
-        <div style="width: 1029px; height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0px rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative;">
+        <div class="flex-col-1024 pop-card" style="width: 100%; max-width: 1029px; height: auto; min-height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0px rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative;">
             
             <!-- Left: Image -->
-            <div style="width: 545px; height: 100%;">
-                <img src="/public/assets/images/icons/service.svg" alt="Supported Living" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="flex: none; width: 100%; max-width: 545px; height: auto; min-height: 424px;">
+                <img src="/public/assets/images/properties/uk-houses/uk-15.jpg" alt="Supported Living" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
 
             <!-- Right: Content -->
@@ -146,7 +164,7 @@ require_once __DIR__ . '/../includes/hero.php';
                 </p>
 
                 <h4 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #1a1a2e; margin-bottom: 16px;">What's Included</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
+                <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
                     <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; color: #1a1a2e; font-weight: 500;">
                         <div style="width: 18px; height: 18px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <img src="/public/assets/images/icons/tick.svg" alt="" width="10">
@@ -180,8 +198,8 @@ require_once __DIR__ . '/../includes/hero.php';
                 </div>
 
                 <!-- Action Button -->
-                <a href="/tenant-enquiry" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
-                    Tenants Enquiry <span>&rarr;</span>
+                <a href="/supported-living.php" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
+                    Learn About Supported Living <span>&rarr;</span>
                 </a>
             </div>
         </div>
@@ -191,11 +209,11 @@ require_once __DIR__ . '/../includes/hero.php';
 <!-- Guaranteed Rent Service -->
 <section style="padding: 80px 0; background-color: #ffffff; padding-top: 0;">
     <div class="container">
-        <div style="width: 1029px; height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0px rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative; flex-direction: row-reverse;">
+        <div class="flex-col-1024 pop-card" style="width: 100%; max-width: 1029px; height: auto; min-height: 424px; margin: 0 auto; background: #F2F2F2; border-radius: 24.7px; box-shadow: 0 10px 30px 0px rgba(0,0,0,0.05); display: flex; overflow: hidden; position: relative; flex-direction: row-reverse;">
             
             <!-- Left: Image (using row-reverse makes this the visually right side) -->
-            <div style="width: 545px; height: 100%;">
-                <img src="/public/assets/images/icons/service.svg" alt="Guaranteed Rent" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="flex: none; width: 100%; max-width: 545px; height: auto; min-height: 424px;">
+                <img src="/public/assets/images/properties/uk-houses/uk-8.jpg" alt="Guaranteed Rent" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
 
             <!-- Right: Content -->
@@ -206,7 +224,7 @@ require_once __DIR__ . '/../includes/hero.php';
                 </p>
 
                 <h4 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: #1a1a2e; margin-bottom: 16px;">What's Included</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
+                <div class="form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-bottom: 30px;">
                     <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; color: #1a1a2e; font-weight: 500;">
                         <div style="width: 18px; height: 18px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <img src="/public/assets/images/icons/tick.svg" alt="" width="10">
@@ -240,8 +258,8 @@ require_once __DIR__ . '/../includes/hero.php';
                 </div>
 
                 <!-- Action Button -->
-                <a href="/landlord-enquiry" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
-                    Landlord Enquiry <span>&rarr;</span>
+                <a href="/guaranteed-rent.php" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #22c55e; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 15px; width: fit-content; transition: background-color 0.3s ease;">
+                    Learn About Guaranteed Rent <span>&rarr;</span>
                 </a>
             </div>
         </div>
@@ -253,3 +271,6 @@ require_once __DIR__ . '/../includes/hero.php';
 require_once __DIR__ . '/../includes/become-tenants.php';
 require_once __DIR__ . '/../includes/footer.php'; 
 ?>
+
+
+
